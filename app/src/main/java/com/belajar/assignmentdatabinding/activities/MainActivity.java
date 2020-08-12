@@ -76,11 +76,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void btnToNumberTwo(View view) {
         startActivity(new Intent(getApplicationContext(), SecondActivity.class));
-        finish();
     }
 
     public void btnToNumberThree(View view) {
         startActivity(new Intent(getApplicationContext(), ThirdActivity.class));
-        finish();
     }
 }
