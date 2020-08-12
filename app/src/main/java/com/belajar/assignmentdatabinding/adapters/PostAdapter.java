@@ -1,6 +1,7 @@
 package com.belajar.assignmentdatabinding.adapters;
 
 import android.content.ClipData;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
@@ -18,6 +19,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
 
     private ArrayList<PostModel> posts = new ArrayList<>();
     public void setPosts(ArrayList<PostModel> posts){
+        Log.d("data", "response" + posts);
         this.posts = posts;
         notifyDataSetChanged();
     }
@@ -41,7 +43,11 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
 
     @Override
     public int getItemCount() {
-        return 0;
+        if (posts != null){
+            return posts.size();
+        }else{
+            return 0;
+        }
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder{

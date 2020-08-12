@@ -25,7 +25,7 @@ public class ThirdActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         PostAdapter adapter = new PostAdapter();
-        StaggeredGridLayoutManager grid = new StaggeredGridLayoutManager(3, LinearLayoutManager.VERTICAL);
+        StaggeredGridLayoutManager grid = new StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_third);
         binding.rvPosts.setLayoutManager(grid);
         binding.rvPosts.setAdapter(adapter);
